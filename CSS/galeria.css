@@ -1,0 +1,202 @@
+html{
+scroll-behavior: smooth;
+
+}
+
+
+body {
+    animation: entrada 0.8s ease;                        /*linha importante para a animação de entrada na pagina*/
+    background-color: aliceblue;
+    margin: 0;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+                                                         /*faz toda a animação de entrada na pagina*/
+@keyframes entrada {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+                                                                    /*_________________*/
+}
+
+.galeria {
+    margin-top: 40px;
+    border-radius: 0;
+    width: 900px;
+    min-height: 100vh;
+    padding: 200px;
+    background-color: #b8d8e8;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin: auto;
+    box-shadow: inset 0 0 30px rgba(0,0,0,0.15);
+}
+
+
+.quadro {
+    background: white;
+    padding: 12px;
+    opacity: 0;
+    animation: aparecer 0.6s ease forwards;
+    padding: 12px;
+    box-shadow:
+    0 8px 15px rgba(0,0,0,0.2);
+    transition: .3s;
+}
+                                                        /*faz toda a animação de entrada nos conteiners*/
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(40px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+
+}
+
+                                            /*nomeia cada conteiner e faz com que eles tenham delays diferentes para aparecer*/
+.quadro:nth-child(1){
+    animation-delay: .1s;
+}
+
+.quadro:nth-child(2){
+    animation-delay: .2s;
+}
+
+.quadro:nth-child(3){
+    animation-delay: .3s;
+}
+
+.quadro:nth-child(4){
+    animation-delay: .4s;
+}
+
+.quadro:nth-child(5){
+    animation-delay: .5s;
+}
+
+.quadro:nth-child(6){
+    animation-delay: .6s;
+}
+
+.quadro:nth-child(7){
+    animation-delay: .7s;
+}
+
+.quadro:nth-child(8){
+    animation-delay: .8s;
+}
+
+.quadro:nth-child(9){
+    animation-delay: .9s;
+}
+                                                        /*_________________________________*/
+
+.quadro p{
+    font-family: sans-serif;
+    text-align: center;
+}
+.imagem {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background: #eee;
+}
+
+h1{
+    color: #002941;
+    margin-left: 10px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 50px;
+
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 18px 40px rgba(15, 34, 52, 0.12);
+  z-index: 100;
+}
+
+
+.interface {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 18px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.interface .logo img{
+    border: 2px solid #000000;
+    object-fit: cover;
+    margin-left: 100px;
+    justify-content: left;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.interface nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 32px;
+}
+
+.interface a{
+    text-decoration: none;
+    color: #5ca5e0;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.interface a:hover{
+    color: #0c5ab4;
+}
+
+.botao{
+  display: inline-block;
+  padding: 2px 10px;
+  background-color: #4bdbff8f;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  margin-bottom: 4px;
+}
+
+.botao:hover{
+    background-color: #5ca5e0;
+}
+
+.quadro:hover {
+
+    transform: translateY(-10px) rotate(1deg);
+
+    box-shadow:
+    0 20px 30px rgba(0,0,0,.25);
+
+}

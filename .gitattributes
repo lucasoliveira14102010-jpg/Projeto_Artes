@@ -1,0 +1,2 @@
+downloads/Projeto-Artes-PC.zip filter=lfs diff=lfs merge=lfs -text
+versao_pc/** filter=lfs diff=lfs merge=lfs -text
