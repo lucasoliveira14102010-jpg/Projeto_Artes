@@ -2,17 +2,15 @@ html{
 scroll-behavior: smooth;
 
 }
-
-
 body {
-    animation: entrada 0.8s ease;                        /*linha importante para a animação de entrada na pagina*/
-    background-color: aliceblue;
+    animation: entrada 0.8s ease;
+    background: linear-gradient(135deg, #fdf7ef 0%, #f7efe6 100%);
     margin: 0;
     min-height: 100vh;
     justify-content: center;
     align-items: center;
-}
-                                                         /*faz toda a animação de entrada na pagina*/
+}    
+                                                               /*faz toda a animação de entrada na pagina*/
 @keyframes entrada {
 
     from {
@@ -31,25 +29,27 @@ body {
     width: 900px;
     min-height: 100vh;
     padding: 200px;
-    background-color: #b8d8e8;
+    background: linear-gradient(135deg, #f3ddc2 0%, #e9c9a1 100%);
+    display: flex;
     border-radius: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     margin: auto;
-    box-shadow: inset 0 0 30px rgba(0,0,0,0.15);
+    box-shadow: inset 0 0 25px rgba(116, 80, 34, 0.12);
 }
 
 
 .quadro {
-    background: white;
+    background: #fffaf4;
     padding: 12px;
     opacity: 0;
     animation: aparecer 0.6s ease forwards;
     padding: 12px;
-    box-shadow:
-    0 8px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 15px rgba(94, 65, 35, 0.12);
     transition: .3s;
+    cursor: pointer;
+    border-radius: 12px;
 }
                                                         /*faz toda a animação de entrada nos conteiners*/
 @keyframes aparecer {
@@ -106,97 +106,90 @@ body {
 .quadro:nth-child(9){
     animation-delay: .9s;
 }
-                                                        /*_________________________________*/
+                                                                  /*_________________________________*/
 
 .quadro p{
-    font-family: sans-serif;
+    font-family: helvetica;
     text-align: center;
 }
+
 .imagem {
     width: 100%;
     aspect-ratio: 1/1;
-    background: #eee;
+    background: linear-gradient(135deg, #f2e0c8 0%, #d7b48a 100%);
+    border-radius: 8px;
 }
 
 h1{
-    color: #002941;
+    color: #8b5e3c;
     margin-left: 10px;
     text-align: center;
     font-family: sans-serif;
     font-size: 50px;
-
 }
 
 header {
   position: sticky;
   top: 0;
-  background: rgba(255, 255, 255, 0.96);
+  background: rgba(255, 248, 240, 0.95);
   backdrop-filter: blur(12px);
-  box-shadow: 0 18px 40px rgba(15, 34, 52, 0.12);
+  box-shadow: 0 10px 25px rgba(102, 72, 42, 0.12);
   z-index: 100;
 }
 
-
-.interface {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 18px 28px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+.interface{
+    max-width: 1120px;  
+    margin: auto;
+    padding: 18px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .interface .logo img{
-    border: 2px solid #000000;
-    object-fit: cover;
-    margin-left: 100px;
-    justify-content: left;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid #c98a4b;
 }
 
-.interface nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 32px;
+.interface nav ul{
+    display:flex;
+    align-items:center;
+    gap:32px;
+    list-style:none;
+    margin:0;
+    padding:0;
 }
 
 .interface a{
-    text-decoration: none;
-    color: #5ca5e0;
     font-family: sans-serif;
-    font-weight: bold;
-    margin-left: 20px;
-    transition: color 0.3s ease;
+    text-decoration:none;
+    color:#a56b3a;
+    font-weight:bold;
+    opacity:.85;
+    transition:.3s;
 }
 
 .interface a:hover{
-    color: #0c5ab4;
-}
-
-.botao{
-  display: inline-block;
-  padding: 2px 10px;
-  background-color: #4bdbff8f;
-  text-decoration: none;
-  border-radius: 10px;
-  transition: background-color 0.3s ease;
-  margin-bottom: 4px;
-}
-
-.botao:hover{
-    background-color: #5ca5e0;
+    opacity:1;
 }
 
 .quadro:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 24px rgba(95, 69, 40, 0.18);
+}
 
-    transform: translateY(-10px) rotate(1deg);
 
-    box-shadow:
-    0 20px 30px rgba(0,0,0,.25);
+.btn{
+    padding: 15px 25px;
+    background: linear-gradient(135deg, #d89b61 0%, #b87335 100%);
+    color: white !important;
+    border-radius: 12px;
+}
 
+
+.btn:hover{
+    opacity: 1;
 }
