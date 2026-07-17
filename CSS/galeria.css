@@ -4,12 +4,23 @@ scroll-behavior: smooth;
 }
 body {
     animation: entrada 0.8s ease;
-    background: linear-gradient(135deg, #fdf7ef 0%, #f7efe6 100%);
+    background: #ffffff;
     margin: 0;
     min-height: 100vh;
     justify-content: center;
     align-items: center;
 }    
+/* modal styles moved from JS */
+.simple-modal-overlay{position:fixed;inset:0;display:grid;place-items:center;background:rgba(0,0,0,0);z-index:9999;opacity:0;pointer-events:none;transition:opacity 220ms ease}
+.simple-modal-overlay.open{background:rgba(0,0,0,0.6);opacity:1;pointer-events:auto}
+.simple-modal-box{width:min(720px,96%);background:#ffffff;border-radius:12px;padding:24px;box-shadow:0 24px 48px rgba(0,0,0,0.18);color:#222;position:relative;text-align:center;transform:translateY(10px) scale(.98);opacity:0;transition:transform 220ms ease, opacity 220ms ease;will-change:transform,opacity}
+.simple-modal-overlay.open .simple-modal-box{transform:translateY(0) scale(1);opacity:1}
+.simple-modal-close{position:absolute;top:10px;right:10px;width:36px;height:36px;border:none;border-radius:50%;background:#fff;box-shadow:0 4px 10px rgba(0,0,0,0.12);cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center}
+.simple-modal-person{margin:6px 0 4px;font-size:1.25rem;color:#5a3c24}
+.simple-modal-title{margin:6px 0 8px;color:#5a3c24;font-weight:600}
+.simple-modal-desc{margin:8px 0;color:#6e4d2d}
+.simple-modal-frame{width:min(360px,86%);height:480px;margin:0 auto 18px;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:10px;background:linear-gradient(135deg, #eaf6ff 0%, #dff4ff 100%);padding:18px;box-shadow:0 8px 18px rgba(0,0,0,0.06),inset 0 0 0 1px rgba(0,0,0,0.03)}
+.simple-modal-frame img{max-height:100%;max-width:100%;width:auto;height:auto;object-fit:contain;display:block}
                                                                /*faz toda a animação de entrada na pagina*/
 @keyframes entrada {
 
@@ -29,27 +40,30 @@ body {
     width: 900px;
     min-height: 100vh;
     padding: 200px;
-    background: linear-gradient(135deg, #f3ddc2 0%, #e9c9a1 100%);
+    background: linear-gradient(135deg, #eaf6ff 0%, #dff4ff 100%);
     display: flex;
     border-radius: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     margin: auto;
-    box-shadow: inset 0 0 25px rgba(116, 80, 34, 0.12);
+    box-shadow: inset 0 0 25px rgba(17, 78, 146, 0.06);
 }
 
 
 .quadro {
-    background: #fffaf4;
+    background: #ffffff;
     padding: 12px;
     opacity: 0;
     animation: aparecer 0.6s ease forwards;
     padding: 12px;
-    box-shadow: 0 8px 15px rgba(94, 65, 35, 0.12);
+    box-shadow: 0 8px 15px rgba(17, 78, 146, 0.06);
     transition: .3s;
     cursor: pointer;
     border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
                                                         /*faz toda a animação de entrada nos conteiners*/
 @keyframes aparecer {
@@ -111,17 +125,20 @@ body {
 .quadro p{
     font-family: helvetica;
     text-align: center;
+    margin-top: auto; /* push paragraph to the bottom */
 }
+
+.quadro .quadro-heading{display:none}
 
 .imagem {
     width: 100%;
     aspect-ratio: 1/1;
-    background: linear-gradient(135deg, #f2e0c8 0%, #d7b48a 100%);
+    background: linear-gradient(135deg, #eaf6ff 0%, #dff4ff 100%);
     border-radius: 8px;
 }
 
 h1{
-    color: #8b5e3c;
+    color: #1f6fb6;
     margin-left: 10px;
     text-align: center;
     font-family: sans-serif;
@@ -131,9 +148,9 @@ h1{
 header {
   position: sticky;
   top: 0;
-  background: rgba(255, 248, 240, 0.95);
+    background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
-  box-shadow: 0 10px 25px rgba(102, 72, 42, 0.12);
+    box-shadow: 0 10px 25px rgba(17, 78, 146, 0.06);
   z-index: 100;
 }
 
@@ -151,7 +168,7 @@ header {
     height:100px;
     border-radius:50%;
     object-fit:cover;
-    border:2px solid #c98a4b;
+    border:2px solid #2b6fb6;
 }
 
 .interface nav ul{
@@ -166,7 +183,7 @@ header {
 .interface a{
     font-family: sans-serif;
     text-decoration:none;
-    color:#a56b3a;
+    color:#276fb5;
     font-weight:bold;
     opacity:.85;
     transition:.3s;
@@ -178,13 +195,13 @@ header {
 
 .quadro:hover {
     transform: translateY(-8px);
-    box-shadow: 0 16px 24px rgba(95, 69, 40, 0.18);
+    box-shadow: 0 16px 24px rgba(30, 79, 176, 0.14);
 }
 
 
 .btn{
     padding: 15px 25px;
-    background: linear-gradient(135deg, #d89b61 0%, #b87335 100%);
+    background: linear-gradient(135deg, #4f86d6 0%, #2b6fb6 100%);
     color: white !important;
     border-radius: 12px;
 }
