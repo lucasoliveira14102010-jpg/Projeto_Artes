@@ -18,7 +18,7 @@ body {
 .simple-modal-close{position:absolute;top:10px;right:10px;width:36px;height:36px;border:none;border-radius:50%;background:#fff;box-shadow:0 4px 10px rgba(0,0,0,0.12);cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center}
 .simple-modal-person{margin:6px 0 4px;font-size:1.25rem;color:#5a3c24}
 .simple-modal-title{margin:6px 0 8px;color:#5a3c24;font-weight:600}
-.simple-modal-desc{margin:8px 0;color:#6e4d2d}
+ .simple-modal-desc{margin:8px 0;color:#2b6a9b}
 .simple-modal-frame{width:min(360px,86%);height:480px;margin:0 auto 18px;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:10px;background:linear-gradient(135deg, #eaf6ff 0%, #dff4ff 100%);padding:18px;box-shadow:0 8px 18px rgba(0,0,0,0.06),inset 0 0 0 1px rgba(0,0,0,0.03)}
 .simple-modal-frame img{max-height:100%;max-width:100%;width:auto;height:auto;object-fit:contain;display:block}
                                                                /*faz toda a animação de entrada na pagina*/
